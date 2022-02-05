@@ -60,101 +60,37 @@
         </div>
 
     </header>
+
     <main>
+    
 
         <div class="container_registro_2">
-            <i class="fas fa-user-circle"></i>
+            <div class="container_registro-icono"><i class="fas fa-user-circle"></i></div>
             <form>
-                <div class="container_nombre">
-
-
-                    </label>
-                    <input placeholder="Nombre y Apellido" name="NombreYApellido">
-
-                </div>
-
+                <input type="text" placeholder="Nombre y apellido" name="NombreYApellido"><br>
+                <input type="text" placeholder="Nombre de usuario" name="nombredeusuario"><br>
+                <input type="text" placeholder="E-mail" name="EmailDelUsuario"><br>
                 <div class="fechadenacimiento">
-
-                    Fecha de nacimiento: <br>
-
+                    <span>Fecha de nacimiento:</span>
                     <input type="date" name="FechaDeNacimientoUsuario">
-
                 </div>
-
-                <div class="nombredeusuario">
-
-                    </label>
-                    <input placeholder="Nombre de Usuario" name="nombredeusuario">
-
-                </div>
-
-                <div class="containere-mail">
-
-
-                    <input placeholder="E-mail" name="EmailDelUsuario">
-
-                </div>
-
-
-                <div class="Domicilio">
-
-
-                    <input placeholder="Domicilio" name="Domicilio">
-
-                </div>
-
+                <input placeholder="Domicilio" name="Domicilio">
                 <div class="Perfil-del-usuario">
-
-                    <p>Perfil del Usuario:</p>
-
-                    <label> Comprar: </label> <input type="radio" name="Perfil del usuario" value="Comprador">
-
-                    <label> Vender: </label><input type="radio" name="Perfil del usuario" value="Vendedor">
-
-
+                    <span>Perfil del Usuario:</span>
+                    <input type="radio" name="Perfil del usuario" value="Comprador"><label>Comprador</label>
+                    <input type="radio" name="Perfil del usuario" value="Vendedor"><label>Vendedor</label>
                 </div>
-
                 <div class="Interes-del-usuario">
-
-                    <p>Categorías de Interés:</p>
-
-                    <label> Electro: </label> <input type="radio" name="Interes-del-usuario"
-                        value="Categorías de Interés">
-
-                    <label> Moda: </label><input type="radio" name="Interes-del-usuario" value="Categorías de Interés">
-
-                    <label> Hogar: </label><input type="radio" name="Interes-del-usuario" value="Categorías de Interés">
-
-                    <label> Juguetería: </label><input type="radio" name="Interes-del-usuario"
-                        value="Categorías de Interés">
-
-                    <label> Vida Sana: </label><input type="radio" name="Interes-del-usuario"
-                        value="Categorías de Interés">
-
+                    <span>Intereses</span>
+                    <div><input type="checkbox" name="Interes-del-usuario" value="Categorías de Interés"><label>Electro</label></div>
+                    <div><input type="checkbox" name="Interes-del-usuario" value="Categorías de Interés"><label>Moda</label></div>
+                    <div><input type="checkbox" name="Interes-del-usuario" value="Categorías de Interés"><label>Hogar</label></div>
+                    <div><input type="checkbox" name="Interes-del-usuario" value="Categorías de Interés"><label>Juguetería</label></div>
+                    <div><input type="checkbox" name="Interes-del-usuario" value="Categorías de Interés"><label>Vida Sana</label></div>
                 </div>
-
-
-                <div class="contraseña">
-
-                    <label>Contraseña:
-                    </label>
-                    <input placeholder="Contraseña" name="ContraseñaDeUsuario">
-
-                </div>
-
-
-                <div class="confirmatucontraseña">
-
-                    <label>Confirma tu contraseña:
-                    </label>
-                    <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
-
-                </div>
-
                 <button type="submit" class="submit">
                     Registrate
                 </button>
-
                 <button type="reset" value="Borrar información">
                     Limpiar
                 </button>

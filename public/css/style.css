@@ -78,16 +78,11 @@ display: none;
 .Descripciones {
     display: none;
     display: initial;
-    visibility: hidden;
-    transition-duration: 0ms;
+    
 
 
 }
 
-
-.Descripciones:hover{
-    visibility:initial;
-}
 
 .contenedor-de-busqueda {
     width: 50%;
@@ -107,57 +102,6 @@ display: none;
     display: none;
 }
 
- /* Navegación en tablet y desktop  */
- @media (min-width:426px) {
-    .contenedor-navbar{
-        display: flex;
-    }  
-
-    .burger-menu{
-         display: none; 
-    }
-
-    article{
-        box-shadow : 0px 0px 10px rgb(100,100,100);
-    }
-
-    
-    
-
-   .logo-mercado {
-       height: 100px;
-       width: 30%;
-   }
-
-   .contenedor-de-busqueda {
-    width: 28%;
-    padding: 15px;
-
-}
-
-.tarjeta-de-credito{
-    display: initial;
-}
- 
- }
- 
-  /* Navegación en tablet  */
-  @media(min-width:426px) and (max-width: 768px) {
-    .productos article {
-        width: 48%;
-        margin: 2px;
-    }
-}
-
- /* Navegación en desktop  */
- @media ( min-width:769px) {
-    .productos article { 
-     width: 24%;
-     margin:2px;
- 
- }
- }
-
 .input-busqueda {
     width: 90%;
 }
@@ -173,9 +117,8 @@ article {
     border-top: 1px solid #ebebeb;
     background-color: white;
     padding: 15px;
-    /* revisar las transiciones */
     
-
+    
 }
 
 
@@ -219,14 +162,14 @@ article {
     right: 20px;
     top: -15px; 
     transition: initial;
+    transition-property:initial
     
     }
 
 .contenedor-descripcion-producto i:hover {
 
     transition-duration: 0s;
-
-
+    
 }
 
 
@@ -278,7 +221,6 @@ article {
     margin-left: 5px;
 }
 
-
 footer{
  width: 100%;
  text-align: center;
@@ -322,8 +264,18 @@ footer{
 
 .caja-login{
     text-align: center;
-    border: 1px solid black;
+    border: solid 1px;
     margin: 20px;
+    border-radius: 10px;
+    font-weight: 45px;    
+}
+
+
+.caja-login input{
+    outline: none;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
 
 }
 
@@ -335,57 +287,71 @@ footer{
     color: rgb(44, 44, 252);
 }
 
+.container_registro_1 {
+    width: 300px;
+}
+
 .container_registro_2 {
-    text-align: center;
-    border: 1px solid black;
-    margin: 20px;
+    border-radius:  100px;
     padding: 10px;
-
-
+    background-color: #ebebeb;
+    width: 300px;
+    color: black;
 }
 
 .container_registro_2 i {
     font-size: 50px;
-   color: rgb(44, 44, 252);
-   margin-bottom: 20px;
-   margin-top: 20px;
-   padding: 10px;
-}
-
-
-.fechadenacimiento {
-
-    padding: 10px;
-    color:rgb(44, 44, 252);
-}
-
-
-.nombredeusuario{
+    color: rgb(44, 44, 252);
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px;
 }
 
-.containere-mail{
-    padding: 10px;
-
+.container_registro-icono {
+    text-align: center;
 }
 
-.Domicilio{
-
-    padding: 10px;
-
+.container_registro_2 form span {
+    display: block;
+    font-weight: bold;
+    padding: 10px 0px;
 }
 
+.container_registro_2 input[type=radio] {
+    width: auto;
+    margin: 0px 50px;
+  }
 
-.Perfil-del-usuario{
-    padding: 10px;
+  .container_registro_2 input[type=checkbox] {
+    width: auto;
+    margin: 0px 50px;
+  }
+
+
+.container_registro_2 form input {
     width: 100%;
-    color:rgb(44, 44, 252);
-}
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
-.Interes-del-usuario{
- padding: 10px;
+  .container_registro_2 form button {
+    width: 100%;
+    background-color: #0022AA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-}
+  .container_registro_2 form .Interes-del-usuario div {
+      padding: 10px 0px;
+  }
 
 .contraseña {
     padding: 10px;
@@ -395,20 +361,90 @@ footer{
 .button-ingresar{
     margin: 10px;
     background-color:#ebebeb;
-    color: #000;
-    color: #000;
+    color: black;
+    border-radius: 10px; 
+    width: 300px;
+    padding:10px;
+   
 }
 
 .button-ingresar:hover{
     background-color: #0022AA;
-    color: #0022AA;
+    color: black;
 
 }
 
 .container-username{
- padding: 10px;
+ padding: 20px;
+
+ 
 
 }
 
+.container-password{
+ padding: 20px;
+ 
+}
 
+/* Navegación en tablet  */
+@media(min-width:426px) and (max-width: 768px) {
+    .productos article {
+        width: 48%;
+        margin: 2px;
+    }
+}
 
+ /* Navegación en desktop  */
+ @media ( min-width:769px) {
+    .productos article { 
+     width: 24%;
+     margin:2px;
+ 
+    }
+
+    .Descripciones {
+        visibility: hidden;
+    }
+
+    .contenedor-descripcion-producto:hover .Descripciones{
+        visibility:visible;
+    }
+ }
+
+  /* Navegación en tablet y desktop  */
+  @media (min-width:426px) {
+    .contenedor-navbar{
+        display: flex;
+    }  
+
+    .burger-menu{
+         display: none; 
+    }
+
+    article{
+        box-shadow : 0px 0px 10px rgb(100,100,100);
+    }
+
+    
+   .logo-mercado {
+       height: 100px;
+       width: 30%;
+   }
+
+   .contenedor-de-busqueda {
+        width: 28%;
+        padding: 15px;
+    }
+
+    .tarjeta-de-credito{
+        display: initial;
+    }
+    
+    .container_registro_2 {
+        width: 500px;
+    }
+
+    .container_registro_1 {
+        width: 500px;
+    }
+ }
